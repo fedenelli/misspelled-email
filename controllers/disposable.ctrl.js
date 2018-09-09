@@ -9,7 +9,7 @@ const checkDisposable = (email) => {
             .then(
                 success => {
                     csv()
-                        .fromFile('../misspelled-email/csv_files/disposable_domains.csv')
+                        .fromFile('./node_modules/misspelled-email/csv_files/disposable_domains.csv')
                         .then(
                             domains => {
                                 // Check for disposable domains
@@ -21,7 +21,7 @@ const checkDisposable = (email) => {
                                             } else {
                                                 // Check for disposable wildcard domains
                                                 csv()
-                                                    .fromFile('../misspelled-email/csv_files/disposable_wildcard_domains.csv')
+                                                    .fromFile('./node_modules/misspelled-email/csv_files/disposable_wildcard_domains.csv')
                                                     .then(
                                                         wildcardDomains => {
                                                             checkDomain(success.data.domain, wildcardDomains, true)

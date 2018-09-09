@@ -1,0 +1,30 @@
+{
+  "name": "misspelled-email",
+  "version": "1.0.0",
+  "description": "Misspelled email domain corrector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedenelli/misspelled-email.git"
+  },
+  "keywords": [
+    "Email",
+    "Validation",
+    "Domain",
+    "Corrector",
+    "Misspelled"
+  ],
+  "author": "Federico Nelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fedenelli/misspelled-email/issues"
+  },
+  "homepage": "https://github.com/fedenelli/misspelled-email#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.8",
+    "validator": "^10.7.1"
+  }
+}

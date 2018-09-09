@@ -27,7 +27,7 @@ const checkUser = (email) => {
 const findUser = (user) => {
     return new Promise((resolve, reject) => {
         csv()
-        .fromFile('./csv_files/invalidemailusers.csv')
+        .fromFile('../misspelled-email/csv_files/invalidemailusers.csv')
         .then(
             users => {
                 users.forEach(item => {

@@ -31,7 +31,7 @@ const misspelled = (email) => {
 const findDomain = (domain) => {
     return new Promise((resolve, reject) => {
         csv()
-        .fromFile('./csv_files/invalidemaildomains.csv')
+        .fromFile('../misspelled-email/csv_files/invalidemaildomains.csv')
         .then(
             domains => {
                 domains.forEach(item => {

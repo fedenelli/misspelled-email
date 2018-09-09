@@ -32,18 +32,20 @@ const findDomain = (domain) => {
     return new Promise((resolve, reject) => {
         csv()
         .fromFile('./node_modules/misspelled-email/csv_files/invalidemaildomains.csv')
+        .subscribe(
+            json => {
+                if (domain === json.domain) {
+                    json.isValid = false;
+                    json.reason = "Wrong domain";
+                    resolve({
+                        success: true,
+                        data: json
+                    });
+                }
+            }
+        )
         .then(
             domains => {
-                domains.forEach(item => {
-                    if (domain == item.domain) {
-                        item.isValid = false;
-                        item.reason = "Wrong domain";
-                        resolve({
-                            success: true,
-                            data: item
-                        });
-                    }
-                });
                 resolve({
                     success: true,
                     data: {

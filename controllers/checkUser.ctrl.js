@@ -28,19 +28,21 @@ const findUser = (user) => {
     return new Promise((resolve, reject) => {
         csv()
         .fromFile('./node_modules/misspelled-email/csv_files/invalidemailusers.csv')
+        .subscribe(
+            json => {
+                if (user === json.user) {
+                    resolve({
+                        success: true,
+                        data: {
+                            isValid: false,
+                            reason: "User is not valid"
+                        }
+                    });
+                }
+            }
+        )
         .then(
             users => {
-                users.forEach(item => {
-                    if (user == item.user) {
-                        resolve({
-                            success: true,
-                            data: {
-                                isValid: false,
-                                reason: "User is not valid"
-                            }
-                        });
-                    }
-                });
                 resolve({
                     success: true,
                     data: {

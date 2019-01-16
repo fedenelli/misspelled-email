@@ -73,6 +73,7 @@ test.de,fake,
 test.nl,fake,
 testtest.com,fake,
 wwww.com,fake,
+gmail.co,typo,gmail.com
 dmail.com,typo,gmail.com
 gail.com,typo,gmail.com
 gamail.com,typo,gmail.com

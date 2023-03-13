@@ -6,7 +6,7 @@ const desmantle = (email) => {
             email = email.split("@");
             resolve({ success: true, data: { user: email[0], domain: email[1] } });
         } else {
-            reject({ success: false, data: { message: "String provided is not an email "} });
+            reject({ success: true, data: { type: 'format', isValid: false, reason: "String provided is not an email"} });
         }
     });
 };

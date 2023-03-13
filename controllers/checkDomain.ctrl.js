@@ -22,7 +22,7 @@ const misspelled = (email) => {
                     );
                 },
                 error => {
-                    reject(error);
+                    resolve(error);
                 }
             );
     });

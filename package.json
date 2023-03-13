@@ -24,6 +24,6 @@
     },
     "homepage": "https://github.com/fedenelli/misspelled-email#readme",
     "dependencies": {
-        "csvtojson": "^2.0.8"
+        "csvtojson": "^2.0.10"
     }
 }
